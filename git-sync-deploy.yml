@@ -1,5 +1,3 @@
 templateFilePath: A-simple-accordion/template.yml
-parameters:
-  - parameterKey: S3StackName
-    parameterValue: my-s3-stack
+parameters: {}
 tags: {}
