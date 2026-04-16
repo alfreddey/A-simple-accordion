@@ -1,4 +1,4 @@
-templateFilePath: git-sync-deploy.yml
+templateFilePath: template.yml
 parameters:
   - parameterKey: S3StackName
     parameterValue: my-s3-stack
