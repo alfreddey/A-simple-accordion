@@ -6,7 +6,6 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: my-simple-bucket-123456
-      AccessControl: Private
 
 Outputs:
   BucketName:
