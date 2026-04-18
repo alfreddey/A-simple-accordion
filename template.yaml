@@ -2,29 +2,18 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: Simple IAM Role Example
 
 Resources:
-  MyIAMRole:
-    Type: AWS::IAM::Role
+  MyIamUser:
+    Type: AWS::IAM:User
     Properties:
-      RoleName: MySimpleRole
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: ec2.amazonaws.com
-            Action: sts:AssumeRole
-      Policies:
-        - PolicyName: S3ReadAccess
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action:
-                  - s3:ListBucket
-                  - s3:GetObject
-                Resource: "*"
+      UserName: !Ref MyIamUsername
+      LoginProfile:
+        Password: !Ref MyIamUserPassword
+        PasswordResetRequired: false
 
-Outputs:
-  IAMRoleOutput:
-    Description: Id of role named MySimpleRole
-    Value: !Ref MyIAMRole
+Parameters:
+  MyIamUsername:
+    Type: String
+
+  MyIamUserPassword:
+    Type: String
+    NoEcho: true
