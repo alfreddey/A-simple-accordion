@@ -3,7 +3,7 @@ Description: Simple IAM Role Example
 
 Resources:
   MyIamUser:
-    Type: AWS::IAM:User
+    Type: AWS::IAM::User
     Properties:
       UserName: !Ref MyIamUsername
       LoginProfile:
