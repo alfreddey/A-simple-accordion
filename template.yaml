@@ -25,5 +25,6 @@ Resources:
                 Resource: "*"
 
 Outputs:
-  Description: Id of role named MySimpleRole
-  Value: !Ref MyIAMRole
+  IAMRoleOutput:
+    Description: Id of role named MySimpleRole
+    Value: !Ref MyIAMRole
