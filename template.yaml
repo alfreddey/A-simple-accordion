@@ -77,7 +77,7 @@ Resources:
   S3User:
     Type: AWS::IAM::User
     Properties:
-      UserName: s3-user
+      UserName: s3-user-temp
       Groups:
         - !Ref S3Group
       LoginProfile:
