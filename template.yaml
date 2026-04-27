@@ -9,7 +9,7 @@ Resources:
   PasswordSecret:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Name: iam-temp-password
+      Name: iam-temp-password-00
       GenerateSecretString:
         SecretStringTemplate: '{}'
         GenerateStringKey: password
